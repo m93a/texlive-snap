@@ -1,0 +1,3 @@
+[submodule "tex-source"]
+	path = texlive-source
+	url = git@github.com:TeX-Live/texlive-source.git
