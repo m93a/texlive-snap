@@ -20,15 +20,10 @@ apps:
 parts:
   texlive:
     source: .
-    plugin: autotools
+    plugin: make
     build-packages:
       - build-essential
-      - libx11-dev
-      - libfontconfig1
-      - libfontconfig1-dev
-      - libxaw7
-      - libxaw7-dev
-      - clisp
+      - rename
     stage-packages:
       - libfontconfig1
       - libfreetype6
