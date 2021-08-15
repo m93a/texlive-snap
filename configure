@@ -1,0 +1,2 @@
+#! /bin/sh
+./texlive-source/configure

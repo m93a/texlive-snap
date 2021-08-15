@@ -1,0 +1,25 @@
+name: texlive # you probably want to 'snapcraft register <name>'
+base: core20
+version: '0.1'
+summary: TeX Live, a LaTeX distribution and package manager
+description: |
+  This is my-snap's description. You have a paragraph or two to tell the
+  most important story about your snap. Keep it under 100 words though,
+  we live in tweetspace and your description wants to look good in the snap
+  store.
+
+grade: devel
+confinement: classic
+
+parts:
+  texlive:
+    source: .
+    plugin: autotools
+    build-packages:
+      - build-essential
+      - libx11-dev
+      - libfontconfig1
+      - libfontconfig1-dev
+      - libxaw7
+      - libxaw7-dev
+      - clisp
