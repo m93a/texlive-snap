@@ -1,6 +1,6 @@
 name: texlive # you probably want to 'snapcraft register <name>'
 base: core20
-version: '0.3'
+version: '0.6'
 summary: TeX Live, a LaTeX distribution and package manager
 description: |
   This is my-snap's description. You have a paragraph or two to tell the
@@ -13,9 +13,11 @@ confinement: classic
 
 apps:
   tlmgr:
-    command: usr/local/bin/x86_64-pc-linux-gnu/tlmgr
-  xetex:
-    command: usr/local/bin/x86_64-pc-linux-gnu/xetex
+    command: dist/bin/x86_64-linux/tlmgr
+  pdflatex:
+    command: dist/bin/x86_64-linux/pdflatex
+  bibtex:
+    command: dist/bin/x86_64-linux/bibtex
 
 parts:
   texlive:
@@ -23,7 +25,7 @@ parts:
     plugin: make
     build-packages:
       - build-essential
-      - rename
+      - wget
     stage-packages:
       - libfontconfig1
       - libfreetype6
